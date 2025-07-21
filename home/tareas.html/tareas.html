@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tareas</title>
+  <link rel="stylesheet" href="tareas.css">
+  <link rel="icon" href="../../Assets/icons/Uranus.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    details {
+      margin-bottom: 1em;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    label {
+      display: block;
+      margin-left: 1em;
+    }
+    .user-search-container {
+      margin-bottom: 2em;
+    }
+    .user-results {
+      display: none;
+      border: 1px solid #ddd;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .user-result {
+      padding: 8px;
+      cursor: pointer;
+    }
+    .user-result:hover {
+      background-color: #f0f0f0;
+    }
+    .save-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .save-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <nav class="custom-nav">
+    <div class="nav-wrapper">
+      <ul class="left-group">
+        <li><a href="../../home/home.html"><i class="material-icons">home</i></a></li>
+        <li><p class="text_name">Juan Jaime</p><b class="text_info">Admin</b></li>
+      </ul>
+      <ul class="right-group">
+        <li><a href="#"><i class="material-icons">notifications</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Asignación de Tareas</h1>
+
+    <div class="user-search-container">
+      <label for="user-search">Asignar a:</label>
+      <input type="text" id="user-search" placeholder="Buscar usuario...">
+      <div class="user-results" id="user-results"></div>
+      <button id="save-tasks" class="save-button">Guardar Tareas</button>
+    </div>
+
+    <!-- Módulo ADMINISTRACIÓN -->
+    <section>
+      <h2>ADMINISTRACIÓN</h2>
+      <details>
+        <summary><input type="checkbox"> RH</summary>
+        <label><input type="checkbox"> Vacaciones</label>
+        <label><input type="checkbox"> Expedientes</label>
+        <label><input type="checkbox"> Eventos</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> TECNOLOGÍA</summary>
+        <label><input type="checkbox"> Funeraria</label>
+        <label><input type="checkbox"> Desar/JA</label>
+        <label><input type="checkbox"> Soporte</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> JURÍDICO</summary>
+        <label><input type="checkbox"> Horno</label>
+        <label><input type="checkbox"> Representac</label>
+        <label><input type="checkbox"> Doc Legales</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> FINANZAS</summary>
+        <label><input type="checkbox"> Compras</label>
+        <label><input type="checkbox"> Fondeois</label>
+        <label><input type="checkbox"> P. Prov Gastos</label>
+      </details>
+    </section>
+
+    <!-- Módulo OPERACIÓN -->
+    <section>
+      <h2>OPERACIÓN</h2>
+      <details>
+        <summary><input type="checkbox"> FU</summary>
+        <label><input type="checkbox"> PPTO</label>
+        <label><input type="checkbox"> DOCUM</label>
+        <label><input type="checkbox"> PRECIOS</label>
+        <label><input type="checkbox"> SUBIR SF</label>
+        <label><input type="checkbox"> SEMAFOROS</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> UVAF</summary>
+        <label><input type="checkbox"> PPTO</label>
+        <label><input type="checkbox"> DOCUM</label>
+        <label><input type="checkbox"> PRECIOS</label>
+        <label><input type="checkbox"> SUBIR SF</label>
+        <label><input type="checkbox"> SEMAFOROS</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> ETHERNUS</summary>
+        <label><input type="checkbox"> PPTO</label>
+        <label><input type="checkbox"> DOCUM</label>
+        <label><input type="checkbox"> PRECIOS</label>
+        <label><input type="checkbox"> SUBIR SF</label>
+        <label><input type="checkbox"> SEMAFOROS</label>
+        <details>
+          <summary><input type="checkbox"> 3EROS</summary>
+          <label><input type="checkbox"> CDMS</label>
+          <label><input type="checkbox"> B2</label>
+          <label><input type="checkbox"> FLORES</label>
+        </details>
+      </details>
+      <details>
+        <summary><input type="checkbox"> PROCESOS</summary>
+        <!-- Añade tareas si hay -->
+      </details>
+    </section>
+
+    <!-- Módulo VENTAS (Nuevo) -->
+    <section>
+      <h2>VENTAS</h2>
+      <details>
+        <summary><input type="checkbox"> Documentos</summary>
+        <label><input type="checkbox"> SOL V&F</label>
+        <label><input type="checkbox"> Cuentas SAF&PA</label>
+        <label><input type="checkbox"> Cotizaciones</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> Lista de Precios</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Convenios</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Expediente</summary>
+        <label><input type="checkbox"> DATOS</label>
+        <label><input type="checkbox"> Estado de cuenta</label>
+        <label><input type="checkbox"> SF PROP</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> APV</summary>
+        <label><input type="checkbox"> DATOS</label>
+        <label><input type="checkbox"> Cuenta</label>
+        <label><input type="checkbox"> Comisiones</label>
+      </details>
+    </section>
+
+    <!-- Módulo COBRANZA (Nuevo) -->
+    <section>
+      <h2>COBRANZA</h2>
+      <details>
+        <summary><input type="checkbox"> Agenda</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Cobrar</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Semáforo</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> S. Pagos</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Auditoría</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+    </section>
+
+    <!-- Módulo CLIENTES (Nuevo) -->
+    <section>
+      <h2>CLIENTES</h2>
+      <details>
+        <summary><input type="checkbox"> TEC.FUN</summary>
+        <label><input type="checkbox"> OBITUR</label>
+        <label><input type="checkbox"> Línea de Tiempo</label>
+        <label><input type="checkbox"> Lista de condolencias</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> Estado de cuentas</summary>
+        <label><input type="checkbox"> Pago</label>
+        <label><input type="checkbox"> Estado de cuenta</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> Documentos</summary>
+        <label><input type="checkbox"> Cuentas</label>
+        <label><input type="checkbox"> Documentos SF</label>
+      </details>
+      <details>
+        <summary><input type="checkbox"> Solicita SF</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Compras</summary>
+        <label><input type="checkbox"> Cafetería</label>
+        <label><input type="checkbox"> Florería</label>
+        <label><input type="checkbox"> Mejoras</label>
+      </details>
+    </section>
+
+    <!-- Módulo MANTENIMIENTO (Nuevo) -->
+    <section>
+      <h2>MANTENIMIENTO</h2>
+      <details>
+        <summary><input type="checkbox"> Vehículos</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Instalaciones</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Almacén</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+    </section>
+
+    <!-- Módulo MANUFACTURA (Nuevo) -->
+    <section>
+      <h2>MANUFACTURA</h2>
+      <details>
+        <summary><input type="checkbox"> Cafetería</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Florería</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+      <details>
+        <summary><input type="checkbox"> Comedor</summary>
+        <!-- Tareas específicas si las hay -->
+      </details>
+    </section>
+  </main>
+
+  <script>
+    const users = [
+      { id: 'user1', name: 'Usuario 1' },
+      { id: 'user2', name: 'Usuario 2' },
+      { id: 'user3', name: 'Usuario 3' },
+      { id: 'user4', name: 'Eduardo' },
+      { id: 'user5', name: 'Edson' },
+      { id: 'user6', name: 'Oscar' },
+    ];
+
+    document.getElementById('user-search').addEventListener('input', function (e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const resultsContainer = document.getElementById('user-results');
+
+      if (searchTerm.length === 0) {
+        resultsContainer.style.display = 'none';
+        return;
+      }
+
+      const filteredUsers = users.filter(user =>
+        user.name.toLowerCase().includes(searchTerm)
+      );
+
+      if (filteredUsers.length > 0) {
+        resultsContainer.innerHTML = filteredUsers.map(user => `
+          <div class="user-result" data-user="${user.id}">${user.name}</div>
+        `).join('');
+        resultsContainer.style.display = 'block';
+
+        document.querySelectorAll('.user-result').forEach(item => {
+          item.addEventListener('click', function () {
+            document.getElementById('user-search').value = this.textContent;
+            resultsContainer.style.display = 'none';
+          });
+        });
+      } else {
+        resultsContainer.innerHTML = '<div class="user-result">No se encontraron usuarios</div>';
+        resultsContainer.style.display = 'block';
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.user-search-container')) {
+        document.getElementById('user-results').style.display = 'none';
+      }
+    });
+
+    document.getElementById('save-tasks').addEventListener('click', function() {
+      const selectedUser = document.getElementById('user-search').value;
+      if (!selectedUser) {
+        alert('Por favor, selecciona un usuario antes de guardar.');
+        return;
+      }
+
+      const selectedTasks = [];
+      document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+        // Obtener la jerarquía de la tarea
+        let taskName = '';
+        let currentElement = checkbox;
+        
+        while (currentElement) {
+          if (currentElement.tagName === 'SUMMARY') {
+            taskName = currentElement.textContent.trim() + (taskName ? ' > ' + taskName : '');
+          } else if (currentElement.tagName === 'LABEL') {
+            taskName = currentElement.textContent.trim() + (taskName ? ' > ' + taskName : '');
+          }
+          
+          if (currentElement.parentElement.tagName === 'DETAILS') {
+            currentElement = currentElement.parentElement.querySelector('summary');
+          } else {
+            currentElement = null;
+          }
+        }
+        
+        selectedTasks.push(taskName);
+      });
+
+      if (selectedTasks.length === 0) {
+        alert('Por favor, selecciona al menos una tarea.');
+        return;
+      }
+
+      alert(`Tareas asignadas a ${selectedUser}:\n${selectedTasks.join('\n')}`);
+      // Aquí podrías enviar los datos a un servidor si es necesario
+    });
+  </script>
+</body>
+</html>

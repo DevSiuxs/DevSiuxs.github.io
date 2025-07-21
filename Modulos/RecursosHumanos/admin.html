@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../../../Assets/icons/Uranus.ico" type="image/x-icon">
+  <title>Administración</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #1f2c56;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2rem;
+      color: #7ED321;
+    }
+
+    .section-buttons, .submenu {
+      display: flex;
+      gap: 15px;
+      margin: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      background: #2f3d71;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #43589f;
+    }
+
+    .submenu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .submenu.active {
+      display: flex;
+    }
+
+    .close-btn {
+      margin-top: 10px;
+      background: #8b0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Administración</h1>
+
+  <div class="section-buttons">
+    <button onclick="showSubmenu('rh')">RH</button>
+    <button onclick="showSubmenu('juridico')">Jurídico</button>
+    <button onclick="showSubmenu('tecnologia')">Tecnología</button>
+    <button onclick="showSubmenu('finanzas')">Finanzas</button>
+  </div>
+
+  <!-- RH -->
+  <div id="submenu-rh" class="submenu">
+    <button onclick="goTo('vacaciones')">Vacaciones</button>
+    <button onclick="goTo('expedientes')">Expedientes</button>
+    <button onclick="goTo('eventos')">Eventos</button>
+    <button class="close-btn" onclick="hideSubmenus()">Cerrar</button>
+  </div>
+
+  <!-- Jurídico -->
+  <div id="submenu-juridico" class="submenu">
+    <button onclick="goTo('horno')">Horno</button>
+    <button onclick="goTo('representaciones')">Representaciones</button>
+    <button onclick="goTo('doclegales')">Doc. Legales</button>
+    <button class="close-btn" onclick="hideSubmenus()">Cerrar</button>
+  </div>
+
+  <!-- Tecnología -->
+  <div id="submenu-tecnologia" class="submenu">
+    <button onclick="goTo('funeraria')">Funeraria</button>
+    <button onclick="goTo('desaria')">Desar / IA</button>
+    <button onclick="goTo('soporte')">Soporte</button>
+    <button class="close-btn" onclick="hideSubmenus()">Cerrar</button>
+  </div>
+
+  <!-- Finanzas -->
+  <div id="submenu-finanzas" class="submenu">
+    <button onclick="goTo('compras')">Compras</button>
+    <button onclick="goTo('fondeos')">Fondeos</button>
+    <button onclick="goTo('pprov')">P. Prov</button>
+    <button onclick="goTo('gastos')">Gastos</button>
+    <button class="close-btn" onclick="hideSubmenus()">Cerrar</button>
+  </div>
+
+  <script>
+    function showSubmenu(id) {
+      hideSubmenus();
+      document.getElementById(`submenu-${id}`).classList.add('active');
+    }
+
+    function hideSubmenus() {
+      document.querySelectorAll('.submenu').forEach(el => el.classList.remove('active'));
+    }
+
+    function goTo(option) {
+      // Ruta base según tu estructura
+      const rutas = {
+        vacaciones: '../../../Projects/PreisaVacaciones/home.html',
+        expedientes: '#',         // Cambia por tu ruta real
+        eventos: '#',
+        horno: '#',
+        representaciones: '#',
+        doclegales: '#',
+        funeraria: '#',
+        desaria: '#',
+        soporte: '#',
+        compras: '#',
+        fondeos: '#',
+        pprov: '#',
+        gastos: '#',
+      };
+
+      const ruta = rutas[option];
+      if (ruta && ruta !== '#') {
+        window.location.href = ruta;
+      } else {
+        alert('Opción en desarrollo.');
+      }
+    }
+  </script>
+</body>
+</html>
