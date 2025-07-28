@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,20 +20,40 @@
             <h2>SOLICITUD DE VACACIONES</h2>
             
             <div class="form-group">
-                <label for="solicitud">FECHA DE INICIO</label>
-                <input type="date" id="solicitud">
+                <label for="inicio">SOLICITO INCIO DE VACACIONES</label>
+                <input type="date" id="inicio" onchange="calcularDias()">
             </div>
             <div class="form-group">
-                <label for="solicitud">FECHA FINAL</label>
-                <input type="date" id="solicitud">
+                <label for="fin">SOLICITO FIN DE VACACIONES</label>
+                <input type="date" id="fin" onchange="calcularDias()">
             </div>
             <div class="form-group">
-                <label for="dias">DIAS SOLICITADOS</label>
-                <input type="number" id="dias" value="">
+                <label for="dias">DIAS A PEDIR</label>
+                <input type="number" id="dias" readonly>
             </div>
         
             <a href="disponibilidad.html" class="submit-btn">Enviar Solicitud</a>
         </div>
+
+        <script>
+            function calcularDias() {
+                const inicio = document.getElementById('inicio').value;
+                const fin = document.getElementById('fin').value;
+                
+                if (inicio && fin) {
+                    const fechaInicio = new Date(inicio);
+                    const fechaFin = new Date(fin);
+                    
+                    // Calcula la diferencia en milisegundos
+                    const diferencia = fechaFin - fechaInicio;
+                    
+                    // Convierte a días (1000 ms * 60 s * 60 min * 24 h)
+                    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24)) + 1;
+                    
+                    document.getElementById('dias').value = dias;
+                }
+            }
+        </script>
     </main>
 </body>
 </html>
