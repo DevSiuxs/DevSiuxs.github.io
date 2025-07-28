@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../../../Assets/icons/Uranus.ico" type="image/x-icon">
+  <title>Administración de Sistemas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #1f2c56;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2rem;
+      color: #7ED321;
+      text-align: center;
+    }
+
+    .section-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    button {
+      background: #2f3d71;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-align: left;
+    }
+
+    button:hover {
+      background: #43589f;
+    }
+
+    .api-tag {
+      background: #7ED321;
+      color: #1f2c56;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Administración de Sistemas de Sistemas</h1>
+
+  <div class="section-buttons">
+    <button onclick="goTo('usuarios')">
+      Lista de todos los usuarios <span class="api-tag">API</span>
+    </button>
+    <button onclick="goTo('modulos')">
+      Asignación de módulos
+    </button>
+    <button onclick="goTo('token')">
+      Generar Token
+    </button>
+  </div>
+
+  <script>
+    function goTo(option) {
+      const rutas = {
+        usuarios: '#',  // Cambia por tu ruta real
+        modulos: '#',
+        token: '#',
+      };
+
+      const ruta = rutas[option];
+      if (ruta && ruta !== '#') {
+        window.location.href = ruta;
+      } else {
+        alert('Opción en desarrollo.');
+      }
+    }
+  </script>
+</body>
+</html>
