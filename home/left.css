@@ -143,35 +143,72 @@
     white-space: nowrap;
     z-index: 10;
 }
-@media (max-width: 768px) {
-     
-    .dashboard {
-        flex-direction:column;    
-    }
-    
+/* Modificaciones para left.css */
+@media (max-width: 1200px) {
     .sidebar-left {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        max-width: 100%;
+        gap: 15px;
+        padding: 15px;
     }
     
     .logo, .user-data, .time-card {
-       margin: auto;
-       width: 100vw;
+        flex: 1 1 300px;
+        max-width: 300px;
+        margin: 0;
+    }
+    
+    .logout {
+        margin-top: 0;
+        width: 100%;
+        order: 4; /* Mover el logout al final */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-left {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .logo, .user-data, .time-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        min-width: 200px;
     }
     
     .centered-img {
-        max-width: 120px;
+        width: 8rem;
+    }
+    
+    .btn-view {
+        padding: 8px 15px;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .sidebar-left {
         flex-direction: column;
+        align-items: center;
     }
     
     .logo, .user-data, .time-card {
         flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .logout {
+        order: unset;
+        margin-top: 10px;
+    }
+    
+    .centered-img {
+        width: 7rem;
     }
 }
