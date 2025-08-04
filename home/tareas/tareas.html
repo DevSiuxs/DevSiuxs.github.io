@@ -8,47 +8,6 @@
   <link rel="icon" href="../../Assets/icons/Uranus.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    details {
-      margin-bottom: 1em;
-    }
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
-    label {
-      display: block;
-      margin-left: 1em;
-    }
-    .user-search-container {
-      margin-bottom: 2em;
-    }
-    .user-results {
-      display: none;
-      border: 1px solid #ddd;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-    .user-result {
-      padding: 8px;
-      cursor: pointer;
-    }
-    .user-result:hover {
-      background-color: #f0f0f0;
-    }
-    .save-button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .save-button:hover {
-      background-color: #45a049;
-    }
-  </style>
 </head>
 <body>
   <nav class="custom-nav">
@@ -64,7 +23,7 @@
   </nav>
 
   <main>
-    <h1>Asignación de Tareas</h1>
+    <h1>Asignación de Modulos</h1>
 
     <div class="user-search-container">
       <label for="user-search">Asignar a:</label>
@@ -128,13 +87,13 @@
         <label><input type="checkbox"> PRECIOS</label>
         <label><input type="checkbox"> SUBIR SF</label>
         <label><input type="checkbox"> SEMAFOROS</label>
+      </details>
         <details>
           <summary><input type="checkbox"> 3EROS</summary>
           <label><input type="checkbox"> CDMS</label>
           <label><input type="checkbox"> B2</label>
           <label><input type="checkbox"> FLORES</label>
         </details>
-      </details>
       <details>
         <summary><input type="checkbox"> PROCESOS</summary>
         <!-- Añade tareas si hay -->
@@ -265,9 +224,9 @@
 
   <script>
     const users = [
-      { id: 'user1', name: 'Usuario 1' },
-      { id: 'user2', name: 'Usuario 2' },
-      { id: 'user3', name: 'Usuario 3' },
+      { id: 'user1', name: 'Carlos' },
+      { id: 'user2', name: 'Juan Jaime' },
+      { id: 'user3', name: 'German' },
       { id: 'user4', name: 'Eduardo' },
       { id: 'user5', name: 'Edson' },
       { id: 'user6', name: 'Oscar' },
