@@ -1,7 +1,7 @@
 .main-content {
             display: grid;
-            grid-template-rows: repeat(auto-fit, minmax(120px, auto));
-            gap: 20px;
+            grid-template-rows: repeat(auto-fit, minmax(60px, auto));
+            gap: 30px;
         }
 
         .card {
@@ -27,13 +27,13 @@
         }
 
         .card-title {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
         }
 
         .card-stats {
             display: flex;
-            gap: 20px;
+            gap: 10px;
             align-items: center;
         }
 
@@ -42,7 +42,7 @@
         }
 
         .stat-value {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: bold;
             color: #4CAF50;
         }

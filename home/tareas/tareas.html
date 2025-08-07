@@ -36,25 +36,26 @@
     <section>
       <h2>ADMINISTRACIÓN</h2>
       <details>
-        <summary><input type="checkbox"> RH</summary>
+        <summary><input type="checkbox"> Recursos Humanos</summary>
+        <label><input type="checkbox"> Reclutamiento y seleccion</label>
         <label><input type="checkbox"> Vacaciones</label>
         <label><input type="checkbox"> Expedientes</label>
-        <label><input type="checkbox"> Eventos</label>
+        <label><input type="checkbox"> Planificacion de Eventos</label>
       </details>
       <details>
-        <summary><input type="checkbox"> TECNOLOGÍA</summary>
+        <summary><input type="checkbox"> Tecnologia</summary>
         <label><input type="checkbox"> Funeraria</label>
-        <label><input type="checkbox"> Desar/JA</label>
+        <label><input type="checkbox"> Desararrollo/IA</label>
         <label><input type="checkbox"> Soporte</label>
       </details>
       <details>
-        <summary><input type="checkbox"> JURÍDICO</summary>
+        <summary><input type="checkbox"> Juridico</summary>
         <label><input type="checkbox"> Horno</label>
         <label><input type="checkbox"> Representac</label>
-        <label><input type="checkbox"> Doc Legales</label>
+        <label><input type="checkbox"> Documentos Legales</label>
       </details>
       <details>
-        <summary><input type="checkbox"> FINANZAS</summary>
+        <summary><input type="checkbox"> Finanzas</summary>
         <label><input type="checkbox"> Compras</label>
         <label><input type="checkbox"> Fondeois</label>
         <label><input type="checkbox"> P. Prov Gastos</label>
@@ -89,7 +90,7 @@
         <label><input type="checkbox"> SEMAFOROS</label>
       </details>
         <details>
-          <summary><input type="checkbox"> 3EROS</summary>
+          <summary><input type="checkbox"> Terceros</summary>
           <label><input type="checkbox"> CDMS</label>
           <label><input type="checkbox"> B2</label>
           <label><input type="checkbox"> FLORES</label>
@@ -106,7 +107,7 @@
       <details>
         <summary><input type="checkbox"> Documentos</summary>
         <label><input type="checkbox"> SOL V&F</label>
-        <label><input type="checkbox"> Cuentas SAF&PA</label>
+        <label><input type="checkbox"> Contratos SAF&PA</label>
         <label><input type="checkbox"> Cotizaciones</label>
       </details>
       <details>
@@ -115,18 +116,21 @@
       </details>
       <details>
         <summary><input type="checkbox"> Convenios</summary>
-        <!-- Tareas específicas si las hay -->
+        <label><input type="checkbox"> Anemex</label>
+        <label><input type="checkbox"> Plenitud</label>
+        <label><input type="checkbox"> Madres</label>
+        <label><input type="checkbox"> Sabritas</label>
       </details>
       <details>
         <summary><input type="checkbox"> Expediente</summary>
-        <label><input type="checkbox"> DATOS</label>
+        <label><input type="checkbox"> Datos</label>
         <label><input type="checkbox"> Estado de cuenta</label>
         <label><input type="checkbox"> SF PROP</label>
       </details>
       <details>
         <summary><input type="checkbox"> APV</summary>
         <label><input type="checkbox"> DATOS</label>
-        <label><input type="checkbox"> Cuenta</label>
+        <label><input type="checkbox"> Contratos</label>
         <label><input type="checkbox"> Comisiones</label>
       </details>
     </section>
@@ -156,14 +160,14 @@
       </details>
     </section>
 
-    <!-- Módulo CLIENTES (Nuevo) -->
+    <!-- Módulo CLIENTES -->
     <section>
       <h2>CLIENTES</h2>
       <details>
         <summary><input type="checkbox"> TEC.FUN</summary>
         <label><input type="checkbox"> OBITUR</label>
         <label><input type="checkbox"> Línea de Tiempo</label>
-        <label><input type="checkbox"> Lista de condolencias</label>
+        <label><input type="checkbox"> Libro de condolencias</label>
       </details>
       <details>
         <summary><input type="checkbox"> Estado de cuentas</summary>
@@ -172,7 +176,7 @@
       </details>
       <details>
         <summary><input type="checkbox"> Documentos</summary>
-        <label><input type="checkbox"> Cuentas</label>
+        <label><input type="checkbox"> Contratos</label>
         <label><input type="checkbox"> Documentos SF</label>
       </details>
       <details>
@@ -258,7 +262,7 @@
           });
         });
       } else {
-        resultsContainer.innerHTML = '<div class="user-result">No se encontraron usuarios</div>';
+        resultsContainer.innerHTML = '<div class="user-result">No existe el trabajador</div>';
         resultsContainer.style.display = 'block';
       }
     });
